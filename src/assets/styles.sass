@@ -1,0 +1,49 @@
+@import 'variables'
+// @import 'fonts'
+
+html, body
+  height: 100%
+
+body
+  background-color: $dark-background
+
+#app
+  text-align: center
+  height: 100%
+  display: flex
+  flex-direction: column
+
+.side-bar
+  button
+    span
+      writing-mode: vertical-rl
+      text-orientation: upright
+
+.side-bar-slide
+  margin-left: -75px
+  transition: 0.5s
+  max-height: 100%
+  border-top-right-radius: 20px
+  border-bottom-right-radius: 20px
+  span
+    font-family: $font-orbitron
+
+.side-bar-slide:hover
+  margin-left: 0
+  transition: 0.5s
+
+.show-slide
+  height: 100px
+  background-color: white
+  display: flex
+  align-items: center
+  align-self: center
+  color: yellow
+  border-top-right-radius: 20px
+  border-bottom-right-radius: 20px
+
+#a:hover + #b
+  margin-left: 0
+
+footer
+  font-family: $font-orbitron
