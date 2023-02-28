@@ -14,10 +14,13 @@ import LanguageSelector from './LanguageSelector.vue'
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-lg-0">
           <li class="nav-item">
-            <RouterLink to="/" class="nav-link">Home</RouterLink>
+            <RouterLink to="/" class="nav-link">{{ $t('router.home') }}</RouterLink>
           </li>
           <li class="nav-item">
-            <RouterLink to="/about" class="nav-link">About</RouterLink>
+            <RouterLink to="/movies" class="nav-link">{{ $t('router.movies') }}</RouterLink>
+          </li>
+          <li class="nav-item">
+            <RouterLink to="/about" class="nav-link">{{ $t('router.about') }}</RouterLink>
           </li>
         </ul>
         <LanguageSelector />

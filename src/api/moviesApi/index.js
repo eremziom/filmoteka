@@ -42,6 +42,20 @@ function postMovie(payload) {
   }))
 }
 
+function updateMovie(payload, id) {
+  return new Promise (((resolve, reject) => {
+    client
+      .put(`/movies/${id}`, payload)
+      .then(res => resolve(res.data))
+      .catch(err => {
+        if (err.response) {
+          reject(err.response)
+        }
+        reject(err)
+      })
+  }))
+}
+
 function deleteMovie() {
   return new Promise (((resolve, reject) => {
     client
@@ -60,5 +74,6 @@ export default {
   getMovies,
   getMovie,
   postMovie,
-  deleteMovie
+  deleteMovie,
+  updateMovie,
 }

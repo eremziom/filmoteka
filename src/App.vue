@@ -11,7 +11,7 @@ import FooterBar from './components/FooterBar.vue'
     <TopBar />
   </header>
   <RouterView />
-  <footer class="footer mt-auto py-3 footer-container bg-dark">
+  <footer class="footer mt-auto py-3 footer-container bg-dark ">
     <FooterBar />
   </footer>
 </template>

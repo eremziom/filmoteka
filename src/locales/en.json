@@ -1,3 +1,37 @@
 {
-    "test": "test message eng"
+  "router": {
+    "home": "Home",
+    "about": "About",
+    "movies": "Movies"
+  },
+  "buttons": {
+    "edit": "Edit",
+    "save": "Save",
+    "delete": "Delete",
+    "cancel": "Cancel"
+  },
+  "modal": {
+    "title": {
+      "edit": "Edit movie",
+      "add": "Add movie",
+      "delete": "Delete movie"
+    },
+    "movie-input": {
+      "name": {
+        "title": "Title",
+        "description": "Description",
+        "duration": "Duration",
+        "year": "Year",
+        "type": "Type",
+        "link": "Link",
+        "img": "Image"
+      }
+    }
+  },
+  "card": {
+    "year": "Year",
+    "duration": "Duration",
+    "type": "Type"
+  },
+  "about_us": "Development project for ftk app"
 }

@@ -31,5 +31,3 @@ app.use(i18n)
 app.use(router)
 
 app.mount('#app')
-
-console.log(i18n)

@@ -1,3 +1,37 @@
 {
-    "test": "testowa wiadomość pl"
+  "router": {
+    "home": "Home",
+    "about": "O nas",
+    "movies": "Filmy"
+  },
+  "buttons": {
+    "edit": "Edytuj",
+    "save": "Zapisz",
+    "delete": "Usuń",
+    "cancel": "Anuluj"
+  },
+  "modal": {
+    "title": {
+      "edit": "Edytuj film",
+      "add": "Dodaj film",
+      "delete": "Usuń film"
+    },
+    "movie-input": {
+      "name": {
+        "title": "Tytuł",
+        "description": "Opis",
+        "duration": "Długość",
+        "year": "Rok",
+        "type": "Typ",
+        "link": "Link",
+        "img": "Obrazek"
+      }
+    }
+  },
+  "card": {
+    "year": "Rok",
+    "duration": "Długość",
+    "type": "Gatunek"
+  },
+  "about_us": "Rozwojowy projekt dla aplikacji ftk"
 }
