@@ -22,12 +22,12 @@ const i18n = createI18n({
     messages: messages,
   });
 
+const pinia = createPinia() 
 const app = createApp(App)
-
-app.use(createPinia())
 
 // install i18n instance
 app.use(i18n)
 app.use(router)
+app.use(pinia)
 
 app.mount('#app')

@@ -1,12 +1,10 @@
 <script setup>
 import { RouterView } from 'vue-router'
-
 import TopBar from './components/TopBar.vue'
 import FooterBar from './components/FooterBar.vue'
 </script>
 
 <template>
-  
   <header>
     <TopBar />
   </header>

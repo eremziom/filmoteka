@@ -8,7 +8,8 @@
     "edit": "Edytuj",
     "save": "Zapisz",
     "delete": "Usuń",
-    "cancel": "Anuluj"
+    "cancel": "Anuluj",
+    "login": "Zaloguj"
   },
   "modal": {
     "title": {
@@ -28,10 +29,17 @@
       }
     }
   },
+  "login": {
+    "login_label": "Login",
+    "password_label": "Hasło"
+  },
   "card": {
     "year": "Rok",
     "duration": "Długość",
     "type": "Gatunek"
+  },
+  "home":{
+    "welcome": "Witaj na Chabrach {login}!"
   },
   "about_us": "Rozwojowy projekt dla aplikacji ftk"
 }

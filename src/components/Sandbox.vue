@@ -3,6 +3,7 @@
   import { useMouse } from '../composables/counter.js'
   import { useFetch } from '../composables/fetch'
   import moviesApi from '../api/moviesApi'
+  import scrapMoviesApi from '../api/scrapMoviesApi'
   import MovieCard from './MovieCard.vue'
   import MovieModal from './MovieModal.vue'
   import { useI18n } from 'vue-i18n'
@@ -16,8 +17,10 @@
 
   let myModal = ref('')
 
+  let filmweblink = ref('')
+
   onMounted(() => {
-    getMovies()
+    // getMovies()
   })
 
   function showAxios() {
@@ -62,10 +65,25 @@
       })
       .catch((err) => console.log(err))
   }
+
+  function scrapMovie() {
+    console.log(filmweblink.value)
+    let payload = {
+      link: filmweblink.value
+    }
+    scrapMoviesApi.getMovie(payload)
+      .then((res) => {
+        console.log(res)
+        movies.value.push(res)
+      })
+      .catch((err) => console.log(err))
+  }
 </script>
 
 <template>
   <div class="container-lg text-center">
+    <input class="w-75 mt-5" placeholder="Filmweb movie link" v-model="filmweblink">
+    <button @click="scrapMovie">Upload</button>
     <div class="row">
       <MovieCard v-for="item in movies" :movie="item" @edit="editMovie">
       </MovieCard>

@@ -8,7 +8,8 @@
     "edit": "Edit",
     "save": "Save",
     "delete": "Delete",
-    "cancel": "Cancel"
+    "cancel": "Cancel",
+    "login": "Log in"
   },
   "modal": {
     "title": {
@@ -28,10 +29,17 @@
       }
     }
   },
+  "login": {
+    "login_label": "Login",
+    "password_label": "Password"
+  },
   "card": {
     "year": "Year",
     "duration": "Duration",
     "type": "Type"
+  },
+  "home":{
+    "welcome": "Welcome to Chabry {login}!"
   },
   "about_us": "Development project for ftk app"
 }
