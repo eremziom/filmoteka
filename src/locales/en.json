@@ -9,7 +9,8 @@
     "save": "Save",
     "delete": "Delete",
     "cancel": "Cancel",
-    "login": "Log in"
+    "login": "Log in",
+    "upload": "Upload"
   },
   "modal": {
     "title": {
@@ -37,6 +38,9 @@
     "year": "Year",
     "duration": "Duration",
     "type": "Type"
+  },
+  "scrap": {
+    "movie_link": "Paste movie link from Filmweb"
   },
   "home":{
     "welcome": "Welcome to Chabry {login}!"

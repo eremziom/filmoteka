@@ -1,7 +1,8 @@
 <script setup>
-import { RouterView } from 'vue-router'
+import { RouterView, useRouter } from 'vue-router'
 import TopBar from './components/TopBar.vue'
 import FooterBar from './components/FooterBar.vue'
+
 </script>
 
 <template>

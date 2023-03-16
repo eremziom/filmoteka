@@ -82,8 +82,8 @@
 
 <template>
   <div class="container-lg text-center">
-    <input class="w-75 mt-5" placeholder="Filmweb movie link" v-model="filmweblink">
-    <button @click="scrapMovie">Upload</button>
+    <input class="w-75 mt-5" :placeholder="t('scrap.movie_link')" v-model="filmweblink">
+    <button @click="scrapMovie">{{ t('buttons.upload') }}</button>
     <div class="row">
       <MovieCard v-for="item in movies" :movie="item" @edit="editMovie">
       </MovieCard>

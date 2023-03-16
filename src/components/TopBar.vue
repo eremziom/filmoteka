@@ -14,7 +14,7 @@ const credentials = useLoginStore()
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul v-if="credentials.isLoged" class="navbar-nav mb-lg-0">
+        <ul v-if="credentials.user.isLoged" class="navbar-nav mb-lg-0">
           <li class="nav-item">
             <RouterLink to="/" class="nav-link">{{ $t('router.home') }}</RouterLink>
           </li>

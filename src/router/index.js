@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import { useLoginStore } from '../stores/login'
+import authApi from '../api/authApi'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -39,12 +40,26 @@ const router = createRouter({
 
 router.beforeEach(async (to, from) => {
   const credentials = useLoginStore()
-  if (
-    !credentials.isLoged &&
-    to.name !== 'login'
-  ) {
-    return { name: 'login' }
+  if (!credentials.user.isLoged && to.name !== 'login') {
+    const token = localStorage.getItem('token')
+    if(token){
+      const payload = {
+        token: localStorage.getItem('token')
+      }
+      authApi.verifyToken(payload)
+        .then((res) => {
+          credentials.setUser(res)
+          return { name: 'home'}
+        })
+        .catch((err) => {
+          console.log(err)
+          return { name: 'login' }
+        })
+    } else {
+      return { name: 'login' }
+    }
   }
+  
 })
 
 export default router

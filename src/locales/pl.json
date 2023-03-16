@@ -9,7 +9,8 @@
     "save": "Zapisz",
     "delete": "Usuń",
     "cancel": "Anuluj",
-    "login": "Zaloguj"
+    "login": "Zaloguj",
+    "upload": "Załaduj"
   },
   "modal": {
     "title": {
@@ -37,6 +38,9 @@
     "year": "Rok",
     "duration": "Długość",
     "type": "Gatunek"
+  },
+  "scrap": {
+    "movie_link": "Wklej link do filmu z Filmweb"
   },
   "home":{
     "welcome": "Witaj na Chabrach {login}!"
