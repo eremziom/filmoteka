@@ -44,16 +44,15 @@ router.beforeEach(async (to, from) => {
     const token = localStorage.getItem('token')
     if(token){
       const payload = {
-        token: localStorage.getItem('token')
+        token: token
       }
       authApi.verifyToken(payload)
         .then((res) => {
           credentials.setUser(res)
-          return { name: 'home'}
         })
         .catch((err) => {
           console.log(err)
-          return { name: 'login' }
+          router.push('/login')
         })
     } else {
       return { name: 'login' }

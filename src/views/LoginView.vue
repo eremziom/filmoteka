@@ -1,8 +1,8 @@
 <script setup>
   import { useLoginStore } from '../stores/login'
   import { useRouter, useRoute } from 'vue-router'
-  import { ref } from 'vue';
-  import authApi from '../api/authApi/';
+  import { ref } from 'vue'
+  import authApi from '../api/authApi/'
   
   const router = useRouter()
   const credentials = useLoginStore()
@@ -16,7 +16,6 @@
     }
     authApi.postLogin(payload)
       .then((res) => {
-        console.log(res)
         credentials.setUser(res)
         router.push('/')
       })

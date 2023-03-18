@@ -1,10 +1,14 @@
 <script setup>
-import { RouterLink } from 'vue-router'
+import { RouterLink, useRouter } from 'vue-router'
 import LanguageSelector from './LanguageSelector.vue'
-import { useLoginStore } from '../stores/login';
+import { useLoginStore } from '../stores/login'
+import ConfirmationModal from './ConfirmationModal.vue'
+import { useLogout } from '../composables/logout.js'
 
 const credentials = useLoginStore()
+const router = useRouter()
 </script>
+
 
 <template>
   <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
@@ -24,9 +28,21 @@ const credentials = useLoginStore()
           <li class="nav-item">
             <RouterLink to="/about" class="nav-link">{{ $t('router.about') }}</RouterLink>
           </li>
+          <li class="nav-item">
+            <a to="/logout" class="nav-link" data-bs-toggle="modal" data-bs-target="#confirmationModal" style="cursor: pointer">{{ $t('buttons.logout') }}</a>
+          </li>
         </ul>
         <LanguageSelector class="ms-auto"/>
       </div>
     </div>
   </nav>
+  <ConfirmationModal @confirmModal="useLogout(router)">
+    <!-- <template v-slot:header>
+      Potwierdź logout
+    </template> -->
+    <template v-slot:body>
+      Czy napewno chcesz się wylogować?
+    </template>
+  </ConfirmationModal>
+
 </template>

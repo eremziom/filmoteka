@@ -10,7 +10,10 @@
     "delete": "Usuń",
     "cancel": "Anuluj",
     "login": "Zaloguj",
-    "upload": "Załaduj"
+    "upload": "Załaduj",
+    "logout": "Wyloguj",
+    "yes": "Tak",
+    "no": "Nie"
   },
   "modal": {
     "title": {

@@ -10,7 +10,10 @@
     "delete": "Delete",
     "cancel": "Cancel",
     "login": "Log in",
-    "upload": "Upload"
+    "upload": "Upload",
+    "logout": "Logout",
+    "yes": "Yes",
+    "no": "No"
   },
   "modal": {
     "title": {
